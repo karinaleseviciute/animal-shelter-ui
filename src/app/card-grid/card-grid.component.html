@@ -1,0 +1,7 @@
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div [fxFlex]="(100/5) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let animal of animals">
+            <app-card [animal]="animal"></app-card>
+      </div>
+    </div>
+  </div>

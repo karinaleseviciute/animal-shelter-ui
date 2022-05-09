@@ -1,0 +1,37 @@
+<div *ngIf="animalViewOnly">
+    <mat-card class="mat-elevation-z4" >
+      
+    <mat-card-header>
+      <mat-card-title> {{animalViewOnly.name}} </mat-card-title>
+    </mat-card-header>
+    <br>
+    <br>
+    <!-- <mat-card-subtitle>{{"karina"}}</mat-card-subtitle> -->
+    <mat-card-content>
+      
+      <p >
+      
+ <i class="fa-solid fa-circle fa-2xs"></i>    Amžius:  {{animalViewOnly.age}} <br>
+ <i class="fa-solid fa-circle fa-2xs"></i> Lytis:  {{animalViewOnly.gender}} <br>
+ <i class="fa-solid fa-circle fa-2xs"></i> Statusas: {{animalViewOnly.status}} <br>
+ <i class="fa-solid fa-circle fa-2xs"></i> Amžius:  {{animalViewOnly.age}} <br>
+ <i class="fa-solid fa-circle fa-2xs"></i> Paskelbta: {{animalViewOnly.published |date:'yyyy-MM-dd'}} <br>
+ <i class="fa-solid fa-circle fa-2xs"></i> Lytis:  {{animalViewOnly.gender}} <br>
+ <i class="fa-solid fa-circle fa-2xs"></i> Adresas: {{animalViewOnly.contact.city}} {{animalViewOnly.contact.address}} {{animalViewOnly.contact.additionalContact}} <br>
+ <i class="fa-solid fa-circle fa-2xs"></i> Kontaktai: {{animalViewOnly.contact.phoneNo}} {{animalViewOnly.contact.email}} <br>
+ <i class="fa-solid fa-circle fa-2xs"></i> Aprašymas:  {{animalViewOnly.description}} <br>
+      </p>
+
+      <!-- <img mat-card-image src="data:image/JPEG;base64,{{image.data}}"> -->
+     
+     
+    </mat-card-content>
+ 
+ <!-- <mat-card-footer>{{"karina"}}</mat-card-footer>  -->
+
+  </mat-card>
+
+  <!-- <div class="photo">
+  <img mat-card-image src="./../assets/images/mountains.jpg" >
+</div> -->
+</div>

@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  
+  <span>Gyvūnų prieglauda </span>
+  
+  <form class="example-form" style="font-size: 14px;text-align:left;">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Pasirinkite miestą</mat-label>
+      <input type="text"
+                         
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+
+  <button mat-button  fxHide.lt-md>
+   press
+  </button>
+</mat-toolbar>

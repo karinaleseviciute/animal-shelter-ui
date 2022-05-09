@@ -1,0 +1,38 @@
+<div *ngIf="_modelView">
+    <mat-card class="mat-elevation-z4" (click)="onCardSelect(_modelView)">
+      
+      <!-- <div style="text-align: end; padding-bottom: 5%;" *ngIf="isLoved==false">
+        <button mat-button (click)="changeLove()"> <i class="fa-regular fa-heart fa-2x"></i></button>
+      </div>
+      <div style="text-align: end;padding-bottom: 5%;" *ngIf="isLoved">
+        <button mat-button (click)="changeLove()"> <i class="fa-solid fa-heart fa-2x"></i></button>
+      </div> -->
+    <!-- <mat-card-header>
+      <mat-card-title>{{animal.name}} {{animal.contact.city}} </mat-card-title>
+    </mat-card-header> -->
+    <img mat-card-image src="./../assets/images/mountains.jpg" >
+    <mat-card-subtitle>{{_modelView.name}}</mat-card-subtitle>
+    <mat-card-content>
+      
+      <mat-chip-list aria-label="Fish selection">
+        <mat-chip>{{_modelView.status}}</mat-chip>
+        <mat-chip>{{_modelView.contact.city}}</mat-chip>
+        <mat-chip >{{_modelView.age}}</mat-chip>
+        <mat-chip >{{_modelView.gender}}</mat-chip>
+       
+      </mat-chip-list>
+        <!-- <div style="text-align: end;" *ngIf="isLoved==false">
+        <button mat-button (click)="changeLove()"> <i class="fa-regular fa-heart fa-2x"></i></button>
+      </div>
+      <div style="text-align: end;" *ngIf="isLoved">
+        <button mat-button (click)="changeLove()"> <i class="fa-solid fa-heart fa-2x"></i></button>
+      </div> -->  
+     
+    </mat-card-content>
+    <!-- <mat-card-actions>
+      <button mat-button>Įsiminti</button>
+      <button mat-button>Plačiau</button>
+    </mat-card-actions> -->
+    <!-- <mat-card-footer>{{animal.contact.city}}</mat-card-footer> -->
+  </mat-card>
+</div>

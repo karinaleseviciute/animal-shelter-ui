@@ -1,0 +1,68 @@
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content > mat-card {
+    margin-bottom: 20px;
+}
+
+.mat-card {
+    background: rgb(243, 243, 243);
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+// .mat-card:hover{
+//     box-shadow: 8px 28px 50px rgb(138, 43, 226), 1px 6px 12px rgba(39,44,49,.04);
+//   transition: all .4s ease;
+// // border-width: 10px !important;
+// // border-color: #8a2be2 !important;
+// }
+
+
+.mat-card-subtitle{
+    color: #002b5c;
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+}
+
+// button{
+//     align-content: flex-end;
+// }
+.btn{
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+// .mat-chip{
+//     background-color: rgb(219, 216, 216);
+//     color: #000;
+//     border: gray;
+// }
+
+.mat-chip-list{
+    align-items: center;
+    align-content: center;
+}
+
+::ng-deep .mat-chip.mat-standard-chip {
+    background: rgb(255, 255, 255);
+    border: 1px solid #B7B8BB;
+    border-radius: 16px;
+    //font-family: Roboto-Regular;
+    color: #000;
+    //margin-right: 8px;
+    //padding: 7px 16px;
+    text-align: center;
+    //text-transform: lowercase;
+    outline: none;
+    align-items: center;
+    align-content: center;
+  }

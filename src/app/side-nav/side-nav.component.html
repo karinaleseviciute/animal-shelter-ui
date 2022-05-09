@@ -1,0 +1,119 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button
+      mat-icon-button
+    
+      (click)="sidenav.toggle()"
+    >
+      <mat-icon *ngIf="!sidenav.opened"> <i class="fa-solid fa-bars"></i> </mat-icon>
+      <mat-icon *ngIf="sidenav.opened"> <i class="fa-solid fa-paw"></i> </mat-icon>
+    </button>
+    Beglobių gyvūnų namai
+  </mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+      <!-- <img
+        class="avatar mat-elevation-z8"
+        src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+      />
+  
+      <h4 class="name">John Smith</h4>
+      <p class="designation">Software Engineer</p> -->
+      <h4 class="name">Filtrai</h4>
+
+    
+  
+      <mat-divider></mat-divider>
+  <div [formGroup]="animalFormGroup">
+      <section class="form-group example-section" >
+        <h4>Pasirinkite gyvūno rūšį:</h4>
+        <p><mat-checkbox class="form-control" formControlName="dogs">Šunys</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="cats">Katės</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="rodents">Graužikai</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="birds">Paukščiai</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="fish">Žuvys</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="other">Kita</mat-checkbox></p>
+      </section>
+
+      <mat-divider></mat-divider>
+
+      <section class="form-group example-section" >
+        <h4>Pasirinkite gyvūno amžių:</h4>
+        <p><mat-checkbox class="form-control" formControlName="young">Jaunas (iki 1 metų)</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="adult">Suaugęs (nuo 1 iki 7 metų)</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="senior">Senjoras (nuo 7 metų) </mat-checkbox></p>        
+      </section>
+
+      <mat-divider></mat-divider>
+
+      <section class="form-group example-section" >
+        <h4>Pasirinkite gyvūno lytį:</h4>
+        <p><mat-checkbox class="form-control" formControlName="female">Patelė</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="male">Patinas</mat-checkbox></p>
+      </section>
+
+      <section class="form-group example-section" >
+        <h4>Pasirinkite gyvūno statusą:</h4>
+        <p><mat-checkbox class="form-control" formControlName="found">Rastas</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="lost">Ieškomas</mat-checkbox></p>
+        <p><mat-checkbox class="form-control" formControlName="forAdoption">Dovanojamas</mat-checkbox></p>
+      </section>
+    
+
+      <mat-divider></mat-divider>
+
+      <form class="example-form" style="font-size: 14px;text-align:left;">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Pasirinkite miestą</mat-label>
+          <input type="text"
+                             
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" name="value" (optionSelected)='getSelectedCity($event.option.value)'>
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+
+    </div>
+
+    <!-- <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> -->
+      
+      <!-- <section class="example-section" [formGroup]="toppings">
+        <h4>You chose:</h4>
+        {{toppings.value | json}}
+      </section> -->
+
+
+      <!-- <button mat-button class="menu-button" routerLink="/profile">
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+      </button>
+      <button mat-button class="menu-button" routerLink="/about">
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </button> -->
+  
+      <!-- <mat-divider></mat-divider> -->
+
+      <div class="filtrodiv">  <button (click)="filterAnimals()" mat-button class="filtras">Filtruoti</button></div>
+  
+      <!-- <button mat-button class="menu-button" routerLink="/help">
+        <mat-icon>help</mat-icon>
+        <span>Help</span>
+      </button> -->
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content mat-elevation-z8">
+        <router-outlet #cardgrid (activate)="fromChildren($event)"></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

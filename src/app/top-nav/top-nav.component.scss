@@ -1,0 +1,36 @@
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content > mat-card {
+    margin-bottom: 16px;
+}
+
+.example-form {
+    min-width: 50px;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 1%;
+    // min-height: 5px;
+    // max-height: 15px;
+    //height: 5px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    
+  }
+
+//   .mat-form-field-appearance-fill .mat-form-field-flex {
+//     border-radius: 4px 4px 0 0;
+//     padding: 6.25em .75em 0 .75em;
+// }
+  
+  .example-full-width {
+    width: 100%;
+  }
